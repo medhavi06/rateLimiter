@@ -1,0 +1,24 @@
+{
+  "name": "ratelimiter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/medhavi06/rateLimiter.git"
+  },
+  "author": "Medhavi Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/medhavi06/rateLimiter/issues"
+  },
+  "homepage": "https://github.com/medhavi06/rateLimiter#readme"
+}
