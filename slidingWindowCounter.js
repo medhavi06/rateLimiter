@@ -11,7 +11,7 @@ module.exports = (req,res,next) => {
             let data = JSON.parse(redisResponse);
             let d = new Date();
             let currentTime = d.getTime();
-            let aMinuteAgo = currentTime - 6000;
+            let aMinuteAgo = currentTime - 60000;
             console.log("currentTime : "+currentTime+" aMinuteAgo : "+aMinuteAgo);
 
             let RequestCountPerMinutes = data.filter((item) => {
@@ -30,7 +30,7 @@ module.exports = (req,res,next) => {
                 thresHold = thresHold + item.counter;
                 console.log("increased thresHold, counter is "+ item.counter);
             })
-            if(thresHold >= 3){
+            if(thresHold >= 5){
                 return res.json({ "error" : 1,"message" : "throttle limit exceeded" })
             }
             else{
